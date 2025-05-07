@@ -1,0 +1,117 @@
+body{
+    background-color: black;
+    /* color:#28d760; */
+    color:limegreen;
+    font-family: monospace;
+}
+
+a{
+    color:limegreen;
+}
+
+a.hover{
+    color: white !important;
+}
+
+.navbar-brand, .nav-link {
+    color: limegreen;
+}
+
+.body{
+    @include @make-container();
+}
+
+.navbar-brand{
+    margin-left: 2%;
+}
+
+#my-icon{
+    width: 150px ;
+    height: auto;
+    margin-top: 5%;
+}
+
+#my-name{
+    font-size: larger;
+    margin-top: 2%;
+}
+
+#body-description{
+    margin-top: auto;
+}
+
+#experience-btn{
+    border-radius: 5px;
+    background-color: limegreen;
+    color: black;
+    font-family: monospace;
+}
+
+#experience-btn:hover{
+    background-color: white;
+}
+
+#experience-section{
+    width:80%;
+    margin: auto;
+    border: solid;
+    border-width: 10px;
+    margin-top: 2%;
+}
+
+#experience-note{
+    margin: auto;
+    padding: 1%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+#experience-title{
+    margin-bottom: 1%;
+}
+
+.experience-points{
+    
+}
+
+#projects-section{
+    margin-top:2%;
+}
+
+#projects-btn{
+    border-radius: 5px;
+    background-color: limegreen;
+    color: black;
+    font-family: monospace;
+    width: 150px;
+}
+
+#projects-btn:hover{
+    background-color: white;
+}
+
+#projects-display{
+    margin: auto;
+    margin-top: 2%;
+}
+
+#render-project{
+    text-align: center;
+    border: soild;
+}
+
+#project-title{
+    background-color: limegreen;
+    color:black;
+    width: 95%;
+    padding: auto;
+}
+
+#project-desc{
+    text-align: center;
+    width: 95%;
+    margin-top: 10%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
