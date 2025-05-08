@@ -13,6 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="styles/index.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 </head>
 <body>
     <!-- setting my header and nav bar -->
@@ -62,13 +63,13 @@
       </div>
 
 
-      <div class = 'row justify-content-center' id = 'experience-section'>
+      <div hidden class = 'row justify-content-center' id = 'experience-content'>
         
         <div class = 'row justify-content-center' id = 'experience-note'>
-          <h5 id = 'experience-title'><strong>This is a test</strong></h5>
-          <p class="experience-desc"><i>Rwanda, Kigali :  May 2022 - Dec 2024</i></p>
+          <h5 hidden id = 'experience-title'><strong>This is a test</strong></h5>
+          <p hidden id="experience-desc"><i>Rwanda, Kigali :  May 2022 - Dec 2024</i></p>
 
-            <ul class = 'experience-points'>
+            <ul hidden id = 'experience-points'>
               <li> Developed my software engineering skills using Ruby and Ruby on Rails emphasising good software engineering
               practices such as constant use of test-driven development to develop new features and applications, using multiple
               software engineering concepts such as BDD, DRY and various other methods to future-proof the code and ensuring its
@@ -83,6 +84,25 @@
             </ul>
 
         </div>
+
+        <div class = 'row justify-content-center' id = 'experience-note'>
+          <h5 hidden id = 'experience-title'><strong>This is a test 2</strong></h5>
+          <p hidden id="experience-desc"><i>Rwanda, Kigali :  May 2024 - Dec 2025</i></p>
+
+            <ul hidden id = 'experience-points'>
+              <li> Should try something else.</li>
+
+              <li> Need to do more with my life</li>
+
+              <li>Want to be underworked and overpaid</li>
+              <li>Thank God!</li>
+            </ul>
+
+        </div>
+      </div>
+
+      <div hidden class='row justify-content-center' id = 'experience-section'>
+        <!-- this section is hidden, is appears on click and all the content in the experience-content shows up here -->
       </div>
 
       <div class="row justify-content-center" id = 'projects-section'>

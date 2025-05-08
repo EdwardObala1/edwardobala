@@ -51,12 +51,18 @@ a.hover{
     background-color: white;
 }
 
+#experience-section.hidden{
+}
+
 #experience-section{
-    width:80%;
+    width:90%;
+    height: 100px;
     margin: auto;
     border: solid;
-    border-width: 10px;
+    border-width: 2px;
+    border-color: black;
     margin-top: 2%;
+    background-color: #f4f5f4;
 }
 
 #experience-note{
