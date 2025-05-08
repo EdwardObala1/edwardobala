@@ -25,6 +25,7 @@ async function typeEffect(element, text, id){
 
     let newElement = document.createElement('h5');
     newElement.id = element;
+    newElement.style.color = 'black';
     targetDiv.appendChild(newElement);
     
     var typed = new Typed("#" + element, {
