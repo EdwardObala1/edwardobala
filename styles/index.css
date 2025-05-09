@@ -56,13 +56,19 @@ a.hover{
 
 #experience-section{
     width:90%;
-    height: 100px;
+    height: auto;
     margin: auto;
     border: solid;
     border-width: 2px;
     border-color: black;
     margin-top: 2%;
     background-color: #f4f5f4;
+    word-wrap: break-word;
+}
+
+.typed-cursor{
+    color: black;
+    display: none;
 }
 
 #experience-note{
