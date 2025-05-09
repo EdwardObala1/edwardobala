@@ -14,45 +14,77 @@
 
     <link rel="stylesheet" href="styles/index.css"/>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <!-- Paste this inside your <head> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- setting my header and nav bar -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Edward</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blogs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Extras</a>
-            </li>
-          </ul>
+      <div class="container-fluid">
+        <div class="row w-100 align-items-center">
+    
+          <!-- Left: Brand -->
+          <div class="col-4 d-flex align-items-center">
+            <a class="navbar-brand" href="#">Home</a>
+          </div>
+    
+          <!-- Center: Centered Text -->
+          <div class="col-4 text-center justify-content-center align-items-center">
+            <h3 class="navbar-text" style="color:#00AA00;">EDWARD'S PORTFOLIO</h3>
+          </div>
+    
+          <!-- Right: Toggler + Nav -->
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <!-- Toggler -->
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Collapsible Nav -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blogs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Extras</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
         </div>
+      </div>
     </nav>
+    
+    
+    
 
     <!-- Here I have the header and the description of what I do -->
     <div id = "body" class="container-fluid" >
-      <div class = 'row justify-content-center' id = 'body-icon'>
-        <div id = 'icon-container' class="col d-flex justify-content-center">
-          <img src = "images/edwardoballa.jpg" id = 'my-icon' />
-        </div>
-      </div>
 
-      <!-- Description -->
-      <div class = 'row justify-content-center' id = 'body-description'>
-        <div id = 'my-name' class="col-9 text-center">
-          <p>Hi there! my name is Edward Okeyo Obala. A techie, a current and future change maker and a techprenuer.</p>
-          <p>I am a Software engineer and Data scientist by profession and practice looking to change the world through the use of technology.</p>
-          <p>I write blogs, make videos, run social ventures and have fun while doing it.</p>
-          <p>Want to see what I do? press the button below.</p>
+      <div class="row" style="border: solid;" id="body-info-section">
+        <div class = 'col-lg-4 justify-content-center align-items-center' id = 'body-icon'>
+          <div id = 'icon-container' class="col d-flex justify-content-center">
+            <img src = "images/edwardoballa.jpg" id = 'my-icon' />
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class = 'col-lg-8 justify-content-center' id = 'body-description'>
+          <div id = 'my-name' class="col-9 text-center">
+            <p>Hi there! my name is Edward Okeyo Obala. A techie, a current and future change maker and a techprenuer.</p>
+            <p>I am a Software engineer and Data scientist by profession and practice looking to change the world through the use of technology.</p>
+            <p>I write blogs, make videos, run social ventures and have fun while doing it.</p>
+            <p>Want to see what I do? press the buttons below.</p>
+          </div>
         </div>
       </div>
 

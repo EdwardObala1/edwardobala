@@ -1,9 +1,12 @@
 body{
-    background-color: black;
+    background-color: #000000;
     /* color:#28d760; */
     color:#00AA00;
-    font-family: monospace;
-    border: solid;
+    font-family: "Press Start 2P", system-ui;
+}
+
+#body-info-section{
+    margin: 20px;
 }
 
 a{
@@ -27,7 +30,7 @@ a.hover{
 }
 
 #my-icon{
-    width: 150px ;
+    width: 300px ;
     height: auto;
     margin-top: 5%;
 }
