@@ -17,12 +17,19 @@ async function typeEffect(targetDiv, element, text, id){
         typeSpeed: 1,
         showCursor: true,
         onComplete: () => {
+          setTimeout(() => {
             const cursor = document.querySelector(`#${fullId} + .typed-cursor`);
             if (cursor) cursor.remove();
+          }, 1000); // waits 1 second before removing the cursor
         }
-    });
+      });
+      
 
-    await sleep(2000);
+    if(element == 'experience-body'){
+        await sleep(10000);
+    }else{
+        await sleep(1000);
+    }
 }
 
 function sleep(ms) {
@@ -44,7 +51,6 @@ async function printText(){
         entryDiv.id = `experience-entry-${i}`;
         entryDiv.style.marginBottom = '10px';
         entryDiv.style.marginTop = '10px';
-        entryDiv.style.border = 'solid';
 
         targetSection.appendChild(entryDiv); // Add wrapper to section
 
