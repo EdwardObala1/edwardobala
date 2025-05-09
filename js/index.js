@@ -16,6 +16,7 @@ async function typeEffect(targetDiv, element, text, id){
         strings: [text],
         typeSpeed: 1,
         showCursor: true,
+        cursorChar: '_',
         onComplete: () => {
           setTimeout(() => {
             const cursor = document.querySelector(`#${fullId} + .typed-cursor`);

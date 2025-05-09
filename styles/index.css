@@ -1,20 +1,21 @@
 body{
     background-color: black;
     /* color:#28d760; */
-    color:limegreen;
+    color:#00AA00;
     font-family: monospace;
+    border: solid;
 }
 
 a{
-    color:limegreen;
+    color:#00AA00;
 }
 
 a.hover{
-    color: white !important;
+    color: #C0C0C0 !important;
 }
 
 .navbar-brand, .nav-link {
-    color: limegreen;
+    color: #00AA00;
 }
 
 .body{
@@ -42,13 +43,13 @@ a.hover{
 
 #experience-btn{
     border-radius: 5px;
-    background-color: limegreen;
+    background-color: #00AA00;
     color: black;
     font-family: monospace;
 }
 
 #experience-btn:hover{
-    background-color: white;
+    background-color: #C0C0C0;
 }
 
 #experience-section.hidden{
@@ -62,7 +63,7 @@ a.hover{
     border-width: 2px;
     border-color: black;
     margin-top: 2%;
-    background-color: #f4f5f4;
+    background-color: #C0C0C0;
     word-wrap: break-word;
 }
 
@@ -74,7 +75,7 @@ a.hover{
     margin: auto;
     padding: 1%;
     font-family: 'Courier New', Courier, monospace;
-    color: white;
+    color: #C0C0C0;
 }
 
 #experience-title{
@@ -91,14 +92,14 @@ a.hover{
 
 #projects-btn{
     border-radius: 5px;
-    background-color: limegreen;
+    background-color: #00AA00;
     color: black;
     font-family: monospace;
     width: 150px;
 }
 
 #projects-btn:hover{
-    background-color: white;
+    background-color: #C0C0C0;
 }
 
 #projects-display{
@@ -112,7 +113,7 @@ a.hover{
 }
 
 #project-title{
-    background-color: limegreen;
+    background-color: #00AA00;
     color:black;
     width: 95%;
     padding: auto;
@@ -122,7 +123,7 @@ a.hover{
     text-align: center;
     width: 95%;
     margin-top: 10%;
-    color: white;
+    color: #C0C0C0;
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
 }
