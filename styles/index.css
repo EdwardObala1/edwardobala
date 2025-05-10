@@ -17,6 +17,10 @@ a.hover{
     color: #C0C0C0 !important;
 }
 
+mark{
+    background-color: #C0C0C0;
+}
+
 .navbar-brand, .nav-link {
     color: #00AA00;
 }
@@ -27,6 +31,12 @@ a.hover{
 
 .navbar-brand{
     margin-left: 2%;
+}
+
+#floating-gif{
+    width: 30px;
+    height: auto;
+    margin-right:5px;
 }
 
 #my-icon{
@@ -46,8 +56,8 @@ a.hover{
 
 #experience-btn{
     border-radius: 5px;
-    background-color: #00AA00;
-    color: black;
+    background-color: black;
+    color: #00AA00;
     font-family: monospace;
 }
 
@@ -95,10 +105,23 @@ a.hover{
 
 #projects-btn{
     border-radius: 5px;
-    background-color: #00AA00;
-    color: black;
+    background-color: black;
+    color: #00AA00;
     font-family: monospace;
-    width: 150px;
+    margin: auto;
+}
+
+#contacts-btn{
+    border-radius: 5px;
+    background-color: black;
+    color: #00AA00;
+    font-family: monospace;
+    margin: auto;
+    margin-top:3%;
+}
+
+#contacts-btn:hover{
+    background-color: #C0C0C0;
 }
 
 #projects-btn:hover{

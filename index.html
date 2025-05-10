@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- setting my header and nav bar -->
@@ -79,18 +80,15 @@
 
         <!-- Description -->
         <div class = 'col-lg-8 justify-content-center' id = 'body-description'>
-          <div id = 'my-name' class="col-9 text-center">
-            <p>Hi there! my name is Edward Okeyo Obala. A techie, a current and future change maker and a techprenuer.</p>
-            <p>I am a Software engineer and Data scientist by profession and practice looking to change the world through the use of technology.</p>
-            <p>I write blogs, make videos, run social ventures and have fun while doing it.</p>
-            <p>Want to see what I do? press the buttons below.</p>
+          <div id="my-name" class="col-9 text-center">
+            <p><span id="typed-output"></span></p>
           </div>
         </div>
       </div>
 
       <div class = 'row justify-content-center' id = 'body-description'>
-        <div id = 'experience-button' class="col-9 text-center">
-          <button onclick="printExperience()" class = 'btn btn-dark' id = 'experience-btn'><strong>My Experience</strong></button>
+        <div id = 'experience-button' class="col-11 justify-content-left">
+          <button onclick="printExperience()" class = 'btn btn-dark border-0' id = 'experience-btn'><img src="images/O7_3jU.gif" id="floating-gif"><strong>My Experience</strong></button>
         </div>
       </div>
 
@@ -139,11 +137,11 @@
 
       <div class="row justify-content-center" id = 'projects-section'>
         <!-- title -->
-        <div class = 'row justify-content-center'>
-          <button onclick="projectsAnimation()" class = 'btn btn-dark' id = 'projects-btn'><strong>My Projects</strong></button>
+        <div class = 'col-11 justify-content-left'>
+          <button onclick="projectsAnimation()" class = 'btn btn-dark border-0' id = 'projects-btn'><img src="images/O7_3jU.gif" id="floating-gif"><strong>My Projects</strong></button>
         </div>
         <!-- body -->
-        <div class = 'row justify-content-center' id = 'projects-display'>
+        <div hidden class = 'row justify-content-center' id = 'projects-display'>
           <div class = 'col-3 justify-content-center' id = 'render-project'>
             <!-- image -->
             <div class = 'row' id = 'project-title'>
@@ -212,6 +210,12 @@
           </div>
         </div>
 
+      </div>
+
+      <div class="row justify-content-center" id="contact-section">
+        <div class = 'col-11 justify-content-left'>
+          <button onclick="contactAnimation()" class = 'btn btn-dark border-0' id = 'contacts-btn'><img src="images/O7_3jU.gif" id="floating-gif"><strong>Contact Me</strong></button>
+        </div>
       </div>
 
     </div>
