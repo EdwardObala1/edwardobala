@@ -1,20 +1,28 @@
 body{
-    background-color: black;
+    background-color: #000000;
     /* color:#28d760; */
-    color:limegreen;
-    font-family: monospace;
+    color:#00AA00;
+    font-family: "Press Start 2P", system-ui;
+}
+
+#body-info-section{
+    margin: 20px;
 }
 
 a{
-    color:limegreen;
+    color:#00AA00;
 }
 
 a.hover{
-    color: white !important;
+    color: #C0C0C0 !important;
+}
+
+mark{
+    background-color: #C0C0C0;
 }
 
 .navbar-brand, .nav-link {
-    color: limegreen;
+    color: #00AA00;
 }
 
 .body{
@@ -25,15 +33,22 @@ a.hover{
     margin-left: 2%;
 }
 
+#floating-gif{
+    width: 30px;
+    height: auto;
+    margin-right:5px;
+}
+
 #my-icon{
-    width: 150px ;
+    width: 300px ;
     height: auto;
     margin-top: 5%;
 }
 
-#my-name{
+#my-elevator-pitch{
     font-size: larger;
     margin-top: 2%;
+    margin-bottom: 4%;
 }
 
 #body-description{
@@ -42,13 +57,14 @@ a.hover{
 
 #experience-btn{
     border-radius: 5px;
-    background-color: limegreen;
-    color: black;
+    background-color: black;
+    color: #00AA00;
     font-family: monospace;
+    margin-top: 2%;
 }
 
 #experience-btn:hover{
-    background-color: white;
+    background-color: #C0C0C0;
 }
 
 #experience-section.hidden{
@@ -62,7 +78,7 @@ a.hover{
     border-width: 2px;
     border-color: black;
     margin-top: 2%;
-    background-color: #f4f5f4;
+    background-color: #C0C0C0;
     word-wrap: break-word;
 }
 
@@ -73,8 +89,9 @@ a.hover{
 #experience-note{
     margin: auto;
     padding: 1%;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
+    font-family: 'Courier New', Courier, monospace !important;
+    color: #C0C0C0;
+    font-size: small;
 }
 
 #experience-title{
@@ -91,14 +108,27 @@ a.hover{
 
 #projects-btn{
     border-radius: 5px;
-    background-color: limegreen;
-    color: black;
+    background-color: black;
+    color: #00AA00;
     font-family: monospace;
-    width: 150px;
+    margin: auto;
+}
+
+#contacts-btn{
+    border-radius: 5px;
+    background-color: black;
+    color: #00AA00;
+    font-family: monospace;
+    margin: auto;
+    margin-top:3%;
+}
+
+#contacts-btn:hover{
+    background-color: #C0C0C0;
 }
 
 #projects-btn:hover{
-    background-color: white;
+    background-color: #C0C0C0;
 }
 
 #projects-display{
@@ -111,8 +141,12 @@ a.hover{
     border: soild;
 }
 
+#testimonials-title{
+    margin-top: 2%;
+}
+
 #project-title{
-    background-color: limegreen;
+    background-color: #00AA00;
     color:black;
     width: 95%;
     padding: auto;
@@ -122,7 +156,7 @@ a.hover{
     text-align: center;
     width: 95%;
     margin-top: 10%;
-    color: white;
+    color: #C0C0C0;
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
 }
