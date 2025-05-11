@@ -45,9 +45,10 @@ mark{
     margin-top: 5%;
 }
 
-#my-name{
+#my-elevator-pitch{
     font-size: larger;
     margin-top: 2%;
+    margin-bottom: 4%;
 }
 
 #body-description{
@@ -59,6 +60,7 @@ mark{
     background-color: black;
     color: #00AA00;
     font-family: monospace;
+    margin-top: 2%;
 }
 
 #experience-btn:hover{
@@ -87,8 +89,9 @@ mark{
 #experience-note{
     margin: auto;
     padding: 1%;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace !important;
     color: #C0C0C0;
+    font-size: small;
 }
 
 #experience-title{
