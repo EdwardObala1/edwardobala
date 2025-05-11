@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const lines = [
       "Hi there! My name is Edward Okeyo Obala. A techie, a current and future change maker and a techpreneur.",
       "I am a Software engineer and Data scientist by profession and practice looking to change the world through the use of technology.",
-      "I write blogs, make videos, run social ventures and have fun while doing it.",
-      "Want to see what I do? <mark>Press the buttons below.</mark>"
+      "I write blogs, make videos, run social ventures and have fun while doing it."
     ];
 
     const container = document.getElementById("my-name");
