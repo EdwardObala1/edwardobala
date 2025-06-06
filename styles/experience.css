@@ -1,0 +1,43 @@
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #00AA00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+  }
+
+#floating-gif{
+    width: 150px;
+    margin: auto;
+}
+
+.progress-bar {
+    width: 50%;
+    height: 20px;
+    border: 2px solid #00AA00;
+}
+  
+.progress {
+    height: 100%;
+    background-color: #00AA00;
+    width: 0;
+}
+
+#experience-page-body{
+    margin: 5%;
+}
+
+#desc{
+    font-size: smaller;
+}
+
+#body{
+    font-size: small;
+}
