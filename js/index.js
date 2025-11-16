@@ -120,30 +120,33 @@ function printExperience() {
     console.log("Completed type effect");
 }
 
-async function printEducationText(){
-    let experienceTitles = Array.from(document.querySelectorAll('#education-title')).map(el => el.textContent);
-    let experienceDesc = Array.from(document.querySelectorAll('#education-desc')).map(el => el.textContent);
+async function printEducationText() {
+  let educationTitles = Array.from(document.querySelectorAll('#education-title')).map(el => el.innerHTML);
+  let educationDesc = Array.from(document.querySelectorAll('#education-desc')).map(el => el.innerHTML);
+  let educationLists = Array.from(document.querySelectorAll('#education-points')).map(el => el.cloneNode(true));
 
-    const targetSection = document.getElementById('education-section');
-    let entryCount = experienceTitles.length;
-    for(let i = 0; i < entryCount; i++){
-        // Create a container div for each experience block
-        let entryDiv = document.createElement('div');
-        entryDiv.className = 'education-entry';
-        entryDiv.id = `education-entry-${i}`;
-        entryDiv.style.marginBottom = '10px';
-        entryDiv.style.marginTop = '10px';
+  const targetSection = document.getElementById('education-section');
+  let entryCount = educationTitles.length;
 
-        targetSection.appendChild(entryDiv); // Add wrapper to section
+  for (let i = 0; i < entryCount; i++) {
+    let entryDiv = document.createElement('div');
+    entryDiv.className = 'education-entry';
+    entryDiv.id = `education-entry-${i}`;
+    entryDiv.style.marginBottom = '10px';
+    entryDiv.style.marginTop = '10px';
+    targetSection.appendChild(entryDiv);
 
-        // Now call typeEffect passing the wrapper as the target
-        await typeEffect(entryDiv, 'education-title', experienceTitles[i], i);
-        await typeEffect(entryDiv, 'education-desc', experienceDesc[i], i);
-        // await typeEffect(entryDiv, 'experience-body', experienceBodies[i], i);
-    }
+    await typeEffect(entryDiv, 'education-title', educationTitles[i], i);
+    await typeEffect(entryDiv, 'education-desc', educationDesc[i], i);
 
-    // add the button
-    targetSection.appendChild(button); // Add wrapper to section
+    // now handle the list properly
+    let list = educationLists[i];
+    list.hidden = false;
+    list.id = `education-body-${i}`;
+    entryDiv.appendChild(list);
+  }
+
+  targetSection.appendChild(button);
 }
 
 
