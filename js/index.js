@@ -110,8 +110,6 @@ function printExperience() {
     var div = document.getElementById('experience-section');
     if (div.hidden) {
         div.hidden = false;
-        // resize column to full length
-        // get rid of testimonial column
     } else {
         div.hidden = true;
         div.innerHTML = '';
@@ -119,5 +117,46 @@ function printExperience() {
     }
 
     printExperienceText();
+    console.log("Completed type effect");
+}
+
+async function printEducationText(){
+    let experienceTitles = Array.from(document.querySelectorAll('#education-title')).map(el => el.textContent);
+    let experienceDesc = Array.from(document.querySelectorAll('#education-desc')).map(el => el.textContent);
+
+    const targetSection = document.getElementById('education-section');
+    let entryCount = experienceTitles.length;
+    for(let i = 0; i < entryCount; i++){
+        // Create a container div for each experience block
+        let entryDiv = document.createElement('div');
+        entryDiv.className = 'education-entry';
+        entryDiv.id = `education-entry-${i}`;
+        entryDiv.style.marginBottom = '10px';
+        entryDiv.style.marginTop = '10px';
+
+        targetSection.appendChild(entryDiv); // Add wrapper to section
+
+        // Now call typeEffect passing the wrapper as the target
+        await typeEffect(entryDiv, 'education-title', experienceTitles[i], i);
+        await typeEffect(entryDiv, 'education-desc', experienceDesc[i], i);
+        // await typeEffect(entryDiv, 'experience-body', experienceBodies[i], i);
+    }
+
+    // add the button
+    targetSection.appendChild(button); // Add wrapper to section
+}
+
+
+function printEducation() {
+    var div = document.getElementById('education-section');
+    if (div.hidden) {
+        div.hidden = false;
+    } else {
+        div.hidden = true;
+        div.innerHTML = '';
+        return;
+    }
+
+    printEducationText();
     console.log("Completed type effect");
 }

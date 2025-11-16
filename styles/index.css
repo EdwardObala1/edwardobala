@@ -101,16 +101,47 @@ mark{
     
 }
 
-#projects-section{
-    margin-top:2%;
-}
-
-#projects-btn{
+#education-btn{
     border-radius: 5px;
     background-color: black;
     color: #00AA00;
     font-family: monospace;
+    margin-top: 2%;
+}
+
+#education-btn:hover{
+    background-color: #C0C0C0;
+}
+
+#education-section.hidden{
+}
+
+#education-section{
+    width:90%;
+    height: auto;
     margin: auto;
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 2%;
+    background-color: #C0C0C0;
+    word-wrap: break-word;
+}
+
+#education-note{
+    margin: auto;
+    padding: 1%;
+    font-family: 'Courier New', Courier, monospace !important;
+    color: #C0C0C0;
+    font-size: small;
+}
+
+#educatione-title{
+    margin-bottom: 1%;
+}
+
+.education-points{
+    
 }
 
 #contacts-btn{
