@@ -163,3 +163,52 @@ function printEducation() {
     printEducationText();
     console.log("Completed type effect");
 }
+
+async function printSkillsText() {
+  let skillsTitles = Array.from(document.querySelectorAll('#skills-title')).map(el => el.innerHTML);
+  // let skillsDesc = Array.from(document.querySelectorAll('#skills-desc')).map(el => el.innerHTML);
+  let skillsLists = Array.from(document.querySelectorAll('#skills-points')).map(el => el.cloneNode(true));
+
+  const targetSection = document.getElementById('skills-section');
+  let entryCount = skillsTitles.length;
+
+  for (let i = 0; i < entryCount; i++) {
+    let entryDiv = document.createElement('div');
+    entryDiv.className = 'skills-entry';
+    entryDiv.id = `skills-entry-${i}`;
+    entryDiv.style.marginBottom = '10px';
+    entryDiv.style.marginTop = '10px';
+    targetSection.appendChild(entryDiv);
+
+    await typeEffect(entryDiv, 'skills-title', skillsTitles[i], i);
+    // await typeEffect(entryDiv, 'skills-desc', skills[i], i);
+
+    // now handle the list properly
+    let list = skillsLists[i];
+    list.hidden = false;
+    list.id = `skills-body-${i}`;
+    entryDiv.appendChild(list);
+  }
+
+  targetSection.appendChild(button);
+}
+
+
+function printSkills() {
+    console.log("Debug line");
+    var div = document.getElementById('skills-section');
+    if (div.hidden) {
+        div.hidden = false;
+    } else {
+        div.hidden = true;
+        div.innerHTML = '';
+        return;
+    }
+
+    printSkillsText();
+    console.log("Completed type effect");
+}
+
+function redirectToContactPage(){
+  window.location.replace('html/contacts.html')
+}

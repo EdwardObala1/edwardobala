@@ -136,7 +136,50 @@ mark{
     font-size: small;
 }
 
-#educatione-title{
+#education-title{
+    margin-bottom: 1%;
+}
+
+.education-points{
+    
+}
+
+#skills-btn{
+    border-radius: 5px;
+    background-color: black;
+    color: #00AA00;
+    font-family: monospace;
+    margin-top: 2%;
+}
+
+#skills-btn:hover{
+    background-color: #C0C0C0;
+}
+
+#skills-section.hidden{
+}
+
+#skills-section{
+    width:90%;
+    height: auto;
+    margin: auto;
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 2%;
+    background-color: #C0C0C0;
+    word-wrap: break-word;
+}
+
+#skills-note{
+    margin: auto;
+    padding: 1%;
+    font-family: 'Courier New', Courier, monospace !important;
+    color: #C0C0C0;
+    font-size: small;
+}
+
+#skills-title{
     margin-bottom: 1%;
 }
 

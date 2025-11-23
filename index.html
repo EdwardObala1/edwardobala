@@ -135,10 +135,6 @@
               </div>
             </div>
 
-            <div hidden class='row justify-content-center' id = 'education-section'>
-              <!-- this section is hidden, is appears on click and all the content in the experience-content shows up here -->
-            </div>
-
             <div hidden class = 'row justify-content-center' id = 'education-content'>
               
               <div class = 'row justify-content-center' id = 'education-note'>
@@ -176,15 +172,48 @@
               <!-- this section is hidden, is appears on click and all the content in the experience-content shows up here -->
             </div>
 
-            <div class="row justify-content-center" id="contact-section">
+            <div class="row justify-content-center" id="body-description">
               <div class = 'col-11 justify-content-left'>
                 <button onclick="printSkills()" class = 'btn btn-dark border-0' id = 'contacts-btn'><img src="images/O7_3jU.gif" id="floating-gif"><strong>My Skills</strong></button>
               </div>
             </div>
 
+            <div hidden class = 'row justify-content-center' id = 'skills-content'>
+              
+              <div class = 'row justify-content-center' id = 'skills-note'>
+                <p hidden id = 'skills-title'><strong>Technical Skills</strong></p>
+                <ul hidden id="skills-points">
+                  <li>PHP, Python, C, .NET, Ruby on Rails</li>
+                  <li>Docker, Kubernetes, AWS</li>
+                  <li>Linux(Unix), Powershell</li>
+                  <li>Scripting and Automation</li>
+                  <li>Full Stack Developement</li>
+                  <li>ML Model integration</li>
+                  <li>Jira/Trello use</li>
+                  <li>Project & App Documentation</li>
+                  <li>Test Driven Developement</li>
+                </ul>
+              </div>
+
+              <div class = 'row justify-content-center' id = 'skills-note'>
+                <h5 hidden id = 'skills-title'><strong>Soft Skills</strong></h5>
+                <ul hidden id="skills-points">
+                  <li>Team Co-operation</li>
+                  <li>Workflow Management</li>
+                  <li>Project Management</li>
+                  <li>Blogging</li>
+                  <li>Agile development</li>
+                </ul>
+              </div>
+            </div>
+
+            <div hidden class='row justify-content-center' id = 'skills-section'>
+              <!-- this section is hidden, is appears on click and all the content in the experience-content shows up here -->
+            </div>
+
             <div class="row justify-content-center" id="contact-section">
               <div class = 'col-11 justify-content-left'>
-                <button onclick="contactAnimation()" class = 'btn btn-dark border-0' id = 'contacts-btn'><img src="images/O7_3jU.gif" id="floating-gif"><strong>Contact Me</strong></button>
+                <button onclick="redirectToContactPage()" class = 'btn btn-dark border-0' id = 'contacts-btn'><img src="images/O7_3jU.gif" id="floating-gif"><strong>Contact Me</strong></button>
               </div>
             </div>
           </div>
