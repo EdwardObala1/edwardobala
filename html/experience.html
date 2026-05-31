@@ -3,67 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Experience | Edward Obala</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
-    <!-- Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.5/dist/umd/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="../styles/index.css"/>
-    <link rel="stylesheet" href="../styles/experience.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <!-- Paste this inside your <head> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/index.css"/>
+    <link rel="stylesheet" href="../styles/experience.css"/>
 </head>
 <body>
-    <!-- setting my header and nav bar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <div class="row w-100 align-items-center">
-    
-          <!-- Left: Brand -->
-          <div class="col-4 d-flex align-items-center">
-            <a class="navbar-brand" href="/my_work/index.html">Home</a>
-          </div>
-    
-          <!-- Center: Centered Text -->
-          <div class="col-4 text-center justify-content-center align-items-center">
-            <h3 class="navbar-text" style="color:#00AA00;">EDWARD'S PORTFOLIO</h3>
-          </div>
-    
-          <!-- Right: Toggler + Nav -->
-          <div class="col-4 d-flex justify-content-end align-items-center">
-            <!-- Toggler -->
-            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <!-- Collapsible Nav -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="html/experience.html">Experience</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="html/projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="html/contacts.html">Contact Me</a>
-                </li>
-              </ul>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-label">LOADING<span class="loading-dots"></span></div>
+        <div class="loading-bar-wrap">
+            <div class="loading-bar">
+                <div class="loading-progress" id="progress"></div>
             </div>
-          </div>
-    
+            <div class="loading-percent" id="loadingPercent">0%</div>
         </div>
-      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">EO_</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="./experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacts.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    </body>
+    <div class="container mt-4 mb-5">
+        <div class="page-title">
+            <span class="prompt-symbol">$</span>cat experience.log &nbsp;<span style="color:#004400;">&mdash; 7 entries</span>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="terminal-window mb-4">
+            <div class="terminal-title-bar">
+                <div class="terminal-controls">
+                    <span class="terminal-dot td-red"></span>
+                    <span class="terminal-dot td-yellow"></span>
+                    <span class="terminal-dot td-green"></span>
+                </div>
+                <span>work-experience.log</span>
+                <span></span>
+            </div>
+            <div class="terminal-content p-0">
+
+                <!-- One World Coders -->
+                <div class="exp-entry">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-company">One World Coders</span>
+                            <span class="exp-role">Software Engineer</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</span>
+                            <span class="exp-dates">04/2021 &ndash; Present</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <p>Delivered full-stack software engineering and technical leadership across multiple client engagements, building and maintaining production systems across diverse tech stacks.</p>
+                        <ul class="exp-bullets">
+                            <li>Designed and built the base platform and features for Integrity Systems and Solutions (New York, US) using Ruby on Rails, including database management, data pipeline handling, and async job scheduling via Sidekiq and Cron on Ubuntu</li>
+                            <li>Collaborated directly with clients to scope, prioritise, and deliver feature requests against production systems</li>
+                            <li>Led ensemble learning research initiative to optimise computing capacity and staff allocation across client projects</li>
+                        </ul>
+                        <div class="mt-2">
+                            <span class="tag">Ruby on Rails</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Sidekiq</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Ubuntu</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-divider"></div>
+
+                <!-- FAO -->
+                <div class="exp-entry">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-company">Food &amp; Agriculture Organization (UN)</span>
+                            <span class="exp-role">Technical Officer</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Rome, Italy (Remote)</span>
+                            <span class="exp-dates">07/2024 &ndash; 01/2025</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <p>Contributed to systems supporting the creation and distribution of UN publications and research outputs across the organisation.</p>
+                        <ul class="exp-bullets">
+                            <li>Developed and deployed automation scripts to streamline internal operational workflows, reducing manual overhead across multiple teams</li>
+                            <li>Engineered new features and a dedicated API layer for the publication content management system, improving integration capabilities for internal and external consumers</li>
+                            <li>Managed and maintained the core publishing infrastructure supporting FAO's global research dissemination pipeline</li>
+                        </ul>
+                        <div class="mt-2">
+                            <span class="tag">.NET</span>
+                            <span class="tag">SharePoint</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">CMS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-divider"></div>
+
+                <!-- Poetry Foundation -->
+                <div class="exp-entry">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-company">Poetry Foundation</span>
+                            <span class="exp-role">Software Engineer</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Chicago, USA (Remote)</span>
+                            <span class="exp-dates">05/2022 &ndash; 06/2023</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <p>Owned backend modernisation and ongoing feature development for a high-traffic legacy platform serving one of the US's leading literary institutions.</p>
+                        <ul class="exp-bullets">
+                            <li>Executed a full backend migration from a legacy PHP/Symfony version to the current release, ensuring continuity of service throughout the transition</li>
+                            <li>Strengthened application security by authoring new XSS prevention rules and input validation logic, addressing package-level vulnerabilities</li>
+                            <li>Optimised backend performance under sustained high traffic, improving response reliability and system stability</li>
+                            <li>Managed server infrastructure deployed on Kubernetes via AWS</li>
+                        </ul>
+                        <div class="mt-2">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Symfony</span>
+                            <span class="tag">Ruby on Rails</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-divider"></div>
+
+                <!-- Munich Re -->
+                <div class="exp-entry">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-company">Digital Partners / Munich Re</span>
+                            <span class="exp-role">Technical Support &amp; Software Engineer</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-location"><i class="fas fa-map-marker-alt"></i> London, UK (Remote)</span>
+                            <span class="exp-dates">09/2021 &ndash; 06/2022</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <p>Provided technical support and infrastructure management for a major reinsurance firm, maintaining stability and security across cloud-hosted enterprise systems.</p>
+                        <ul class="exp-bullets">
+                            <li>Maintained and stabilised multiple production applications on a Windows Server environment in AWS</li>
+                            <li>Implemented and enforced security best practices across the core platform, proactively mitigating vulnerabilities</li>
+                            <li>Administered user access management across platforms and devices, including remote device management for distributed teams</li>
+                            <li>Served as primary point of contact for bug escalations across a multi-user environment</li>
+                        </ul>
+                        <div class="mt-2">
+                            <span class="tag">Windows Server</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Technical Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-divider"></div>
+
+                <!-- Kite Financial -->
+                <div class="exp-entry exp-entry-compact">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-company">Kite Financial</span>
+                            <span class="exp-role">Frontend Development Intern</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</span>
+                            <span class="exp-dates">06/2020 &ndash; 09/2020</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="exp-bullets">
+                            <li>Developed HTML, CSS, and PHP email templates and landing page components as part of the company's frontend stack</li>
+                            <li>Conducted user research to inform a full redesign of the company's web landing page, incorporating iterative feedback from stakeholders</li>
+                        </ul>
+                        <div class="mt-2">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">UX Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-divider"></div>
+
+                <!-- Oxford WildCRU -->
+                <div class="exp-entry exp-entry-compact">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-company">Oxford University &ndash; WildCRU</span>
+                            <span class="exp-role">Research Assistant</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</span>
+                            <span class="exp-dates">09/2019 &ndash; 12/2019</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="exp-bullets">
+                            <li>Collected and managed quantitative and qualitative data on student interactions within a conservation education course, identifying behavioural patterns and engagement outliers</li>
+                            <li>Applied data analysis to optimise course content delivery, contributing to measurable improvements in student satisfaction</li>
+                        </ul>
+                        <div class="mt-2">
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Research</span>
+                            <span class="tag">Qualitative Methods</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-divider"></div>
+
+                <!-- GeRRI -->
+                <div class="exp-entry exp-entry-compact">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-company">GeRRI &ndash; Genetic Research &amp; Resource Institute</span>
+                            <span class="exp-role">Data &amp; Resources Collection Intern</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Kiambu, Kenya</span>
+                            <span class="exp-dates">06/2019 &ndash; 09/2019</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="exp-bullets">
+                            <li>Collected, maintained, and validated data from the genetic material lab, ensuring accuracy and integrity of institutional records</li>
+                            <li>Reviewed stored genetic resources and flagged contaminated material for disposal in line with lab protocols</li>
+                        </ul>
+                        <div class="mt-2">
+                            <span class="tag">Data Management</span>
+                            <span class="tag">Lab Protocols</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="terminal-window mb-4">
+            <div class="terminal-title-bar">
+                <div class="terminal-controls">
+                    <span class="terminal-dot td-red"></span>
+                    <span class="terminal-dot td-yellow"></span>
+                    <span class="terminal-dot td-green"></span>
+                </div>
+                <span>awards.log</span>
+                <span></span>
+            </div>
+            <div class="terminal-content p-0">
+
+                <div class="exp-entry exp-entry-compact">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-company">StartUpHack &mdash; 1st Place</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <p>Developed a technological solution to re-establish and grow social interaction after COVID-19's adverse effects.</p>
+                    </div>
+                </div>
+
+                <div class="exp-divider"></div>
+
+                <div class="exp-entry exp-entry-compact">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-company">ALU Innovate Award &mdash; 1st Place</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <p>Pitched Lwandle, a fish farming venture, through all competition stages. Received seed funding and mentoring to launch the venture.</p>
+                    </div>
+                </div>
+
+                <div class="exp-divider"></div>
+
+                <div class="exp-entry exp-entry-compact">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-company">HultPrize &mdash; Regionals Nairobi</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <p>Qualified for the Nairobi regional finals through Lwandle, a fish farming venture, competing for the $1M HultPrize seed fund.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center mb-2">
+            <a href="../Edward_Okeyo_Obala_CV.pdf" download="Edward_Okeyo_Obala_CV.pdf" class="btn-terminal">
+                <i class="fas fa-download" style="margin-right:10px;"></i>DOWNLOAD CV
+            </a>
+        </div>
+    </div>
+
+    <script src="../js/loadingScreen.js"></script>
+    <script>loadingScreen()</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Edward Obala</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/index.css"/>
+    <link rel="stylesheet" href="../styles/contacts.css"/>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">EO_</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="./experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./contacts.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4 mb-5">
+        <div class="page-title">
+            <span class="prompt-symbol">$</span>./contact.sh
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Contact info -->
+            <div class="col-lg-5">
+                <div class="terminal-window h-100">
+                    <div class="terminal-title-bar">
+                        <div class="terminal-controls">
+                            <span class="terminal-dot td-red"></span>
+                            <span class="terminal-dot td-yellow"></span>
+                            <span class="terminal-dot td-green"></span>
+                        </div>
+                        <span>contact-info.txt</span>
+                        <span></span>
+                    </div>
+                    <div class="terminal-content">
+                        <p class="prompt-line mb-3"><span class="prompt-symbol">$</span>cat contact-info.txt</p>
+
+                        <div class="contact-info-item">
+                            <span class="contact-label"><i class="fas fa-map-marker-alt"></i> Location</span>
+                            <span class="contact-value">Nairobi, Kenya</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-label"><i class="fas fa-envelope"></i> Email</span>
+                            <span class="contact-value"><a href="mailto:eoballa@gmail.com" style="color:inherit;">eoballa@gmail.com</a></span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-label"><i class="fas fa-briefcase"></i> Work type</span>
+                            <span class="contact-value">Remote &amp; On-site</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-label"><i class="fas fa-circle"></i> Status</span>
+                            <span class="contact-value"><span class="status-dot"></span><span class="status-online">Open to work</span></span>
+                        </div>
+
+                        <hr class="term-divider mt-3">
+
+                        <p class="prompt-line mt-2 mb-2"><span class="prompt-symbol">$</span>ls social/</p>
+                        <div class="social-links">
+                            <a href="https://github.com/EdwardObala1" class="social-link-item" target="_blank">
+                                <i class="fab fa-github"></i> github.com/EdwardObala1
+                            </a>
+                            <a href="https://linkedin.com/in/EdwardObala1" class="social-link-item" target="_blank">
+                                <i class="fab fa-linkedin"></i> linkedin.com/in/EdwardObala1
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact form -->
+            <div class="col-lg-7">
+                <div class="terminal-window">
+                    <div class="terminal-title-bar">
+                        <div class="terminal-controls">
+                            <span class="terminal-dot td-red"></span>
+                            <span class="terminal-dot td-yellow"></span>
+                            <span class="terminal-dot td-green"></span>
+                        </div>
+                        <span>send-message.sh</span>
+                        <span></span>
+                    </div>
+                    <div class="terminal-content">
+                        <p class="prompt-line mb-4"><span class="prompt-symbol">$</span>./send-message.sh</p>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label class="form-label-term">// name</label>
+                                <input type="text" class="form-input-term" placeholder="Your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label-term">// email</label>
+                                <input type="email" class="form-input-term" placeholder="your@email.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label-term">// subject</label>
+                                <input type="text" class="form-input-term" placeholder="What's this about?">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label-term">// message</label>
+                                <textarea class="form-input-term form-textarea-term" rows="5" placeholder="Your message..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-terminal w-100" id="submitBtn">
+                                <i class="fas fa-paper-plane" style="margin-right:10px;"></i>SEND MESSAGE
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.textContent = '[ MESSAGE SENT ✓ ]';
+            btn.style.borderColor = '#00CC00';
+            btn.style.color = '#00FF00';
+            btn.style.boxShadow = '0 0 16px rgba(0,200,0,0.3)';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-paper-plane" style="margin-right:10px;"></i>SEND MESSAGE';
+                btn.style.borderColor = '';
+                btn.style.color = '';
+                btn.style.boxShadow = '';
+                this.reset();
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>
