@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="4" fill="#0a0a0a"/>
+  <rect width="32" height="32" rx="4" fill="none" stroke="#003300" stroke-width="1"/>
+  <!-- CRT scanlines -->
+  <line x1="0" y1="4"  x2="32" y2="4"  stroke="#001a00" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="8"  x2="32" y2="8"  stroke="#001a00" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="12" x2="32" y2="12" stroke="#001a00" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="16" x2="32" y2="16" stroke="#001a00" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="20" x2="32" y2="20" stroke="#001a00" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="24" x2="32" y2="24" stroke="#001a00" stroke-width="0.5" opacity="0.5"/>
+  <line x1="0" y1="28" x2="32" y2="28" stroke="#001a00" stroke-width="0.5" opacity="0.5"/>
+  <!-- > prompt arrow -->
+  <polyline points="4,11 10,16 4,21" fill="none" stroke="#00FF00" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- _ underscore cursor -->
+  <rect x="13" y="21" width="10" height="2.5" fill="#00FF00"/>
+</svg>
