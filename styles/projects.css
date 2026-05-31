@@ -1,0 +1,58 @@
+body {
+      background-color: black;
+      color: #00FF00;
+      font-family: 'Press Start 2P', monospace;
+      margin: 0;
+      padding: 0px;
+    }
+
+    .window {
+      position: relative;
+      background-color: #000;
+      border: 3px double #00FF00;
+      width: 80%;
+      height: 250px;
+      margin: 40px auto;
+      z-index: 1;
+      box-shadow: 0 0 8px #00FF00;
+      padding: 0;
+    }
+
+    .title-bar {
+      background-color: #003300;
+      color: #00FF00;
+      padding: 6px 12px;
+      border-bottom: 2px solid #00FF00;
+      text-transform: uppercase;
+    }
+
+    .content {
+      padding: 16px 20px;
+      line-height: 1.8;
+      font-size: 12px;
+      overflow-y: auto;
+      height: calc(100% - 40px);
+    }
+
+    .window:nth-child(2) {
+      margin-left: 60px;
+    }
+
+    .window:nth-child(3) {
+      margin-left: 120px;
+    }
+
+    .window:nth-child(4) {
+      margin-left: 180px;
+    }
+
+    @media (max-width: 768px) {
+      .window {
+        width: 92%;
+      }
+      .window:nth-child(2),
+      .window:nth-child(3),
+      .window:nth-child(4) {
+        margin-left: auto;
+      }
+    }

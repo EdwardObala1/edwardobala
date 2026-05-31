@@ -24,10 +24,6 @@ mark{
     color: #00AA00;
 }
 
-.body{
-    @include @make-container();
-}
-
 .navbar-brand{
     margin-left: 2%;
 }
@@ -66,9 +62,6 @@ mark{
     background-color: #C0C0C0;
 }
 
-#experience-section.hidden{
-}
-
 #experience-section{
     width:90%;
     height: auto;
@@ -97,10 +90,6 @@ mark{
     margin-bottom: 1%;
 }
 
-.experience-points{
-    
-}
-
 #education-btn{
     border-radius: 5px;
     background-color: black;
@@ -111,9 +100,6 @@ mark{
 
 #education-btn:hover{
     background-color: #C0C0C0;
-}
-
-#education-section.hidden{
 }
 
 #education-section{
@@ -140,10 +126,6 @@ mark{
     margin-bottom: 1%;
 }
 
-.education-points{
-    
-}
-
 #skills-btn{
     border-radius: 5px;
     background-color: black;
@@ -154,9 +136,6 @@ mark{
 
 #skills-btn:hover{
     background-color: #C0C0C0;
-}
-
-#skills-section.hidden{
 }
 
 #skills-section{
@@ -181,10 +160,6 @@ mark{
 
 #skills-title{
     margin-bottom: 1%;
-}
-
-.education-points{
-    
 }
 
 #contacts-btn{
