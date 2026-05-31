@@ -1,18 +1,19 @@
-function loadingScreen(){
-    const loadingScreen = document.getElementById('loadingScreen');
-    const progressBar = document.getElementById('progress');
-    const content = document.querySelector('.content');
+function loadingScreen() {
+    const screen = document.getElementById('loadingScreen');
+    const bar = document.getElementById('progress');
+    const label = document.getElementById('loadingPercent');
     let progress = 0;
-  
-    function updateProgress() {
-      progress += 1;
-      progressBar.style.width = progress + '%';
-  
-      if (progress >= 100) {
-        clearInterval(intervalId);
-        loadingScreen.style.display = 'none';
-      }
-    }
-  
-    const intervalId = setInterval(updateProgress, 20);
+
+    const id = setInterval(() => {
+        progress += 1;
+        if (bar) bar.style.width = progress + '%';
+        if (label) label.textContent = progress + '%';
+
+        if (progress >= 100) {
+            clearInterval(id);
+            setTimeout(() => {
+                if (screen) screen.style.display = 'none';
+            }, 150);
+        }
+    }, 18);
 }

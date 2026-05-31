@@ -1,58 +1,60 @@
-body {
-      background-color: black;
-      color: #00FF00;
-      font-family: 'Press Start 2P', monospace;
-      margin: 0;
-      padding: 0px;
-    }
+.project-card {
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
 
-    .window {
-      position: relative;
-      background-color: #000;
-      border: 3px double #00FF00;
-      width: 80%;
-      height: 250px;
-      margin: 40px auto;
-      z-index: 1;
-      box-shadow: 0 0 8px #00FF00;
-      padding: 0;
-    }
+.project-card:hover {
+    border-color: #005500;
+    box-shadow: 0 0 30px rgba(0, 120, 0, 0.15);
+    transform: translateY(-4px);
+}
 
-    .title-bar {
-      background-color: #003300;
-      color: #00FF00;
-      padding: 6px 12px;
-      border-bottom: 2px solid #00FF00;
-      text-transform: uppercase;
-    }
+.project-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    color: #00CC00;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
 
-    .content {
-      padding: 16px 20px;
-      line-height: 1.8;
-      font-size: 12px;
-      overflow-y: auto;
-      height: calc(100% - 40px);
-    }
+.project-subtitle {
+    color: #009900;
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-top: -8px;
+}
 
-    .window:nth-child(2) {
-      margin-left: 60px;
-    }
+.project-desc {
+    color: #B8B8B8;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+    margin-top: 6px;
+}
 
-    .window:nth-child(3) {
-      margin-left: 120px;
-    }
+.project-type-badge {
+    font-size: 8px;
+    background-color: #001200;
+    border: 1px solid #004400;
+    color: #00AA00;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    font-family: 'Press Start 2P', monospace;
+}
 
-    .window:nth-child(4) {
-      margin-left: 180px;
-    }
+.project-stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+}
 
-    @media (max-width: 768px) {
-      .window {
-        width: 92%;
-      }
-      .window:nth-child(2),
-      .window:nth-child(3),
-      .window:nth-child(4) {
-        margin-left: auto;
-      }
-    }
+.stat-chip {
+    font-size: 12px;
+    color: #009900;
+    background-color: #000e00;
+    border: 1px solid #002200;
+    padding: 2px 10px;
+    border-radius: 2px;
+}

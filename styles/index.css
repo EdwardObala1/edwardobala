@@ -1,210 +1,343 @@
-body{
-    background-color: #000000;
-    color:#00AA00;
-    font-family: "Press Start 2P", system-ui;
+* {
+    box-sizing: border-box;
 }
 
-#body-info-section{
-    margin: 20px;
-}
-
-a{
-    color:#00AA00;
-}
-
-a.hover{
-    color: #C0C0C0 !important;
-}
-
-mark{
-    background-color: #C0C0C0;
-}
-
-.navbar-brand, .nav-link {
-    color: #00AA00;
-}
-
-.navbar-brand{
-    margin-left: 2%;
-}
-
-#floating-gif{
-    width: 30px;
-    height: auto;
-    margin-right:5px;
-}
-
-#my-icon{
-    width: 300px ;
-    height: auto;
-    margin-top: 5%;
-}
-
-#my-elevator-pitch{
-    font-size: larger;
-    margin-top: 2%;
-    margin-bottom: 4%;
-}
-
-#body-description{
-    margin-top: auto;
-}
-
-#experience-btn{
-    border-radius: 5px;
-    background-color: black;
-    color: #00AA00;
-    font-family: monospace;
-    margin-top: 2%;
-}
-
-#experience-btn:hover{
-    background-color: #C0C0C0;
-}
-
-#experience-section{
-    width:90%;
-    height: auto;
-    margin: auto;
-    border: solid;
-    border-width: 2px;
-    border-color: black;
-    margin-top: 2%;
-    background-color: #C0C0C0;
-    word-wrap: break-word;
-}
-
-.typed-cursor{
-    color: black;
-}
-
-#experience-note{
-    margin: auto;
-    padding: 1%;
-    font-family: 'Courier New', Courier, monospace !important;
-    color: #C0C0C0;
-    font-size: small;
-}
-
-#experience-title{
-    margin-bottom: 1%;
-}
-
-#education-btn{
-    border-radius: 5px;
-    background-color: black;
-    color: #00AA00;
-    font-family: monospace;
-    margin-top: 2%;
-}
-
-#education-btn:hover{
-    background-color: #C0C0C0;
-}
-
-#education-section{
-    width:90%;
-    height: auto;
-    margin: auto;
-    border: solid;
-    border-width: 2px;
-    border-color: black;
-    margin-top: 2%;
-    background-color: #C0C0C0;
-    word-wrap: break-word;
-}
-
-#education-note{
-    margin: auto;
-    padding: 1%;
-    font-family: 'Courier New', Courier, monospace !important;
-    color: #C0C0C0;
-    font-size: small;
-}
-
-#education-title{
-    margin-bottom: 1%;
-}
-
-#skills-btn{
-    border-radius: 5px;
-    background-color: black;
-    color: #00AA00;
-    font-family: monospace;
-    margin-top: 2%;
-}
-
-#skills-btn:hover{
-    background-color: #C0C0C0;
-}
-
-#skills-section{
-    width:90%;
-    height: auto;
-    margin: auto;
-    border: solid;
-    border-width: 2px;
-    border-color: black;
-    margin-top: 2%;
-    background-color: #C0C0C0;
-    word-wrap: break-word;
-}
-
-#skills-note{
-    margin: auto;
-    padding: 1%;
-    font-family: 'Courier New', Courier, monospace !important;
-    color: #C0C0C0;
-    font-size: small;
-}
-
-#skills-title{
-    margin-bottom: 1%;
-}
-
-#contacts-btn{
-    border-radius: 5px;
-    background-color: black;
-    color: #00AA00;
-    font-family: monospace;
-    margin: auto;
-    margin-top:3%;
-}
-
-#contacts-btn:hover{
-    background-color: #C0C0C0;
-}
-
-#projects-btn:hover{
-    background-color: #C0C0C0;
-}
-
-#projects-display{
-    margin: auto;
-    margin-top: 2%;
-}
-
-#render-project{
-    text-align: center;
-    border: soild;
-}
-
-#testimonials-title{
-    margin-top: 2%;
-}
-
-#project-title{
-    background-color: #00AA00;
-    color:black;
-    width: 95%;
-    padding: auto;
-}
-
-#project-desc{
-    text-align: center;
-    width: 95%;
-    margin-top: 10%;
-    color: #C0C0C0;
+body {
+    background-color: #0a0a0a;
+    color: #00CC00;
     font-family: 'Courier New', Courier, monospace;
-    font-size: small;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* CRT scanline overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.06) 2px,
+        rgba(0, 0, 0, 0.06) 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #003300; }
+::-webkit-scrollbar-thumb:hover { background: #006600; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Press Start 2P', monospace;
+}
+
+a {
+    color: #00CC00;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+a:hover {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+/* ── Navbar ── */
+.navbar {
+    background-color: #000 !important;
+    border-bottom: 1px solid #002200;
+    box-shadow: 0 2px 24px rgba(0, 120, 0, 0.1);
+    padding: 14px 0;
+}
+
+.navbar-brand {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 18px;
+    color: #00FF00 !important;
+    text-shadow: 0 0 14px rgba(0, 255, 0, 0.55);
+    letter-spacing: 3px;
+}
+
+.nav-link {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: #00BB00 !important;
+    margin-left: 28px;
+    padding: 4px 0 !important;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #00FF00 !important;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+}
+
+.navbar-toggler {
+    border-color: #003300;
+    padding: 4px 8px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 120, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ── Terminal Window Component ── */
+.terminal-window {
+    background-color: #040804;
+    border: 1px solid #004a00;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 60, 0, 0.15), inset 0 0 80px rgba(0, 4, 0, 0.7);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.terminal-title-bar {
+    background-color: #001200;
+    color: #00AA00;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #002200;
+    letter-spacing: 1px;
+    user-select: none;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.75;
+}
+
+.td-red    { background-color: #FF5F57; }
+.td-yellow { background-color: #FFBD2E; }
+.td-green  { background-color: #28CA41; }
+
+.terminal-content {
+    padding: 22px 26px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #00CC00;
+}
+
+.terminal-content p {
+    margin-bottom: 4px;
+}
+
+/* ── Prompt ── */
+.prompt-symbol {
+    color: #00FF00;
+    font-weight: bold;
+    margin-right: 6px;
+    user-select: none;
+}
+
+.prompt-line {
+    color: #009900;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+/* ── Tags ── */
+.tag {
+    display: inline-block;
+    border: 1px solid #004400;
+    background-color: #001200;
+    color: #00AA00;
+    font-size: 13px;
+    padding: 2px 10px;
+    margin: 3px 2px;
+    border-radius: 2px;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    border-color: #00AA00;
+    color: #00CC00;
+    box-shadow: 0 0 6px rgba(0, 170, 0, 0.2);
+    cursor: default;
+}
+
+/* ── Buttons ── */
+.btn-terminal {
+    background-color: transparent;
+    border: 1px solid #006600;
+    color: #00AA00;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    padding: 12px 22px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-terminal:hover {
+    background-color: #003300;
+    border-color: #00AA00;
+    color: #00FF00;
+    box-shadow: 0 0 18px rgba(0, 150, 0, 0.3);
+    text-decoration: none;
+}
+
+/* ── Blink / Cursor ── */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+.blink-cursor::after {
+    content: '█';
+    animation: blink 1.1s infinite;
+    color: #00FF00;
+    font-size: 13px;
+    margin-left: 2px;
+}
+
+.typed-cursor {
+    color: #00FF00 !important;
+    font-size: 14px !important;
+}
+
+/* ── Status ── */
+.status-online { color: #00FF00; }
+
+.status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #00FF00;
+    animation: blink 2s infinite;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* ── Page title ── */
+.page-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 11px;
+    color: #009900;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #001a00;
+}
+
+/* ── Divider ── */
+.term-divider {
+    border: none;
+    border-top: 1px solid #001a00;
+    margin: 14px 0;
+}
+
+/* ── Card link hover ── */
+.card-link {
+    display: block;
+    text-decoration: none;
+}
+
+.card-link:hover .terminal-window {
+    border-color: #005500;
+    box-shadow: 0 0 30px rgba(0, 120, 0, 0.18), inset 0 0 80px rgba(0, 4, 0, 0.7);
+    transform: translateY(-5px);
+}
+
+.card-link:hover { text-decoration: none; }
+
+/* ── Homepage: Hero ── */
+#profile-photo {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border: 2px solid #003300;
+    border-radius: 4px;
+    box-shadow: 0 0 24px rgba(0, 120, 0, 0.25);
+    filter: contrast(1.05) saturate(0.85);
+}
+
+.hero-name {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(16px, 2.6vw, 26px);
+    color: #00FF00;
+    text-shadow: 0 0 24px rgba(0, 255, 0, 0.35);
+    margin: 6px 0 10px 0;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.hero-subtitle {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: #009900;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+#typed-output {
+    color: #00CC00;
+    font-size: 15px;
+    line-height: 1.9;
+    min-height: 65px;
+}
+
+.social-icons a {
+    color: #008800;
+    font-size: 17px;
+    margin-right: 16px;
+    transition: all 0.2s;
+}
+
+.social-icons a:hover {
+    color: #00AA00;
+    text-shadow: 0 0 8px rgba(0, 170, 0, 0.4);
+}
+
+/* ── Homepage: Nav cards ── */
+.nav-card-cta {
+    color: #009900 !important;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px !important;
+    margin-top: 12px !important;
+    letter-spacing: 1px;
+    border-top: 1px solid #001a00;
+    padding-top: 12px !important;
+}
+
+/* ── Testimonials ── */
+.testimonial-block {
+    border-left: 2px solid #002200;
+    padding-left: 16px;
+}
+
+.testimonial-quote {
+    color: #AAAAAA;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.testimonial-author {
+    color: #00AA00;
+    font-size: 13px;
+    margin-bottom: 0;
 }

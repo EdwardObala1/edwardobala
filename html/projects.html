@@ -3,92 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Projects | Edward Obala</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="../styles/index.css"/>
-    <link rel="stylesheet" href="../styles/projects.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <!-- Paste this inside your <head> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/index.css"/>
+    <link rel="stylesheet" href="../styles/projects.css"/>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <div class="row w-100 align-items-center">
-  
-        <!-- Left: Brand -->
-        <div class="col-4 d-flex align-items-center">
-          <a class="navbar-brand" href="/my_work/index.html">Home</a>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">EO_</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="./experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacts.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
-  
-        <!-- Center: Centered Text -->
-        <div class="col-4 text-center justify-content-center align-items-center">
-          <h3 class="navbar-text" style="color:#00AA00;">EDWARD'S PORTFOLIO</h3>
+    </nav>
+
+    <div class="container mt-4 mb-5">
+        <div class="page-title">
+            <span class="prompt-symbol">$</span>ls ~/projects/ &nbsp;<span style="color:#004400;">&mdash; 5 items</span>
         </div>
-  
-        <!-- Right: Toggler + Nav -->
-        <div class="col-4 d-flex justify-content-end align-items-center">
-          <!-- Toggler -->
-          <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <!-- Collapsible Nav -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="./experience.html">Experience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./contacts.html">Contact Me</a>
-              </li>
-            </ul>
-          </div>
+
+        <div class="row g-4">
+
+            <!-- Chaguo Bright -->
+            <div class="col-lg-6 d-flex">
+                <div class="terminal-window project-card flex-fill">
+                    <div class="terminal-title-bar">
+                        <div class="terminal-controls">
+                            <span class="terminal-dot td-red"></span>
+                            <span class="terminal-dot td-yellow"></span>
+                            <span class="terminal-dot td-green"></span>
+                        </div>
+                        <span>chaguo-bright/</span>
+                        <span class="project-type-badge">CIVIC TECH &bull; ACTIVE</span>
+                    </div>
+                    <div class="terminal-content">
+                        <h2 class="project-title">Chaguo Bright</h2>
+                        <p class="project-subtitle">Civic Education Platform</p>
+                        <p class="prompt-line"><span class="prompt-symbol">$</span>cat README.md</p>
+                        <p class="project-desc">
+                            Co-developing a multilingual civic education platform to improve access to leadership accountability information in Kenya, with planned regional expansion. Serves as a structured public ledger of leadership decisions, attaching accountability to named individuals over time.
+                        </p>
+                        <div class="project-stats-row">
+                            <span class="stat-chip">03/2024 &ndash; Present</span>
+                            <span class="stat-chip">Kenya &rarr; East Africa</span>
+                        </div>
+                        <hr class="term-divider">
+                        <p class="prompt-line" style="font-size:13px;"><span class="prompt-symbol">$</span>cat tech-stack.txt</p>
+                        <div>
+                            <span class="tag">AI Fact-Checker</span>
+                            <span class="tag">Multilingual NLP</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">Civic Data</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- African Children's Kick Initiative -->
+            <div class="col-lg-6 d-flex">
+                <div class="terminal-window project-card flex-fill">
+                    <div class="terminal-title-bar">
+                        <div class="terminal-controls">
+                            <span class="terminal-dot td-red"></span>
+                            <span class="terminal-dot td-yellow"></span>
+                            <span class="terminal-dot td-green"></span>
+                        </div>
+                        <span>acki-drive/</span>
+                        <span class="project-type-badge">SOCIAL IMPACT</span>
+                    </div>
+                    <div class="terminal-content">
+                        <h2 class="project-title">African Children's Kick Initiative</h2>
+                        <p class="project-subtitle">ACKI Drive &mdash; Orphanage Support Platform</p>
+                        <p class="prompt-line"><span class="prompt-symbol">$</span>cat README.md</p>
+                        <p class="project-desc">
+                            A digital awareness and resource platform for orphanages across Kenya and East Africa, aimed at increasing visibility, funding, and adoption rates. Applies ML-driven engagement targeting to identify likely donors and volunteers, and explores recommendation systems for matching children with prospective foster families.
+                        </p>
+                        <div class="project-stats-row">
+                            <span class="stat-chip">08/2024</span>
+                            <span class="stat-chip">East Africa</span>
+                        </div>
+                        <hr class="term-divider">
+                        <p class="prompt-line" style="font-size:13px;"><span class="prompt-symbol">$</span>cat tech-stack.txt</p>
+                        <div>
+                            <span class="tag">ML Targeting</span>
+                            <span class="tag">Recommendation Systems</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Web Platform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Internal Fraud Detection -->
+            <div class="col-lg-6 d-flex">
+                <div class="terminal-window project-card flex-fill">
+                    <div class="terminal-title-bar">
+                        <div class="terminal-controls">
+                            <span class="terminal-dot td-red"></span>
+                            <span class="terminal-dot td-yellow"></span>
+                            <span class="terminal-dot td-green"></span>
+                        </div>
+                        <span>fraud-detection-ml/</span>
+                        <span class="project-type-badge">RESEARCH &bull; ACTIVE</span>
+                    </div>
+                    <div class="terminal-content">
+                        <h2 class="project-title">Internal Fraud Detection</h2>
+                        <p class="project-subtitle">Machine Learning &amp; Data Mining</p>
+                        <p class="prompt-line"><span class="prompt-symbol">$</span>cat README.md</p>
+                        <p class="project-desc">
+                            Ongoing research investigating ML and data mining techniques to detect and prevent internal procurement fraud, with focus on East African public sector contexts. Built and evaluated a baseline detection model; found ensemble approaches in human-assisted settings yield more reliable results than individual techniques.
+                        </p>
+                        <div class="project-stats-row">
+                            <span class="stat-chip">01/2022 &ndash; Present</span>
+                            <span class="stat-chip">Research</span>
+                        </div>
+                        <hr class="term-divider">
+                        <p class="prompt-line" style="font-size:13px;"><span class="prompt-symbol">$</span>cat tech-stack.txt</p>
+                        <div>
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Data Mining</span>
+                            <span class="tag">Ensemble Learning</span>
+                            <span class="tag">Outlier Detection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speech Emotion Recognition -->
+            <div class="col-lg-6 d-flex">
+                <div class="terminal-window project-card flex-fill">
+                    <div class="terminal-title-bar">
+                        <div class="terminal-controls">
+                            <span class="terminal-dot td-red"></span>
+                            <span class="terminal-dot td-yellow"></span>
+                            <span class="terminal-dot td-green"></span>
+                        </div>
+                        <span>speech-emotion-recognition/</span>
+                        <span class="project-type-badge">DEEP LEARNING</span>
+                    </div>
+                    <div class="terminal-content">
+                        <h2 class="project-title">Speech Emotion Recognition</h2>
+                        <p class="project-subtitle">Deep Learning Model</p>
+                        <p class="prompt-line"><span class="prompt-symbol">$</span>cat README.md</p>
+                        <p class="project-desc">
+                            Designed and implemented a deep learning model to identify emotional states within speech audio, proposed as a decision-support tool for emergency responders and therapists operating without direct contact. Trained on the RAVDESS labelled audio dataset.
+                        </p>
+                        <div class="project-stats-row">
+                            <span class="stat-chip">09/2021 &ndash; 12/2021</span>
+                            <span class="stat-chip">RAVDESS Dataset</span>
+                        </div>
+                        <hr class="term-divider">
+                        <p class="prompt-line" style="font-size:13px;"><span class="prompt-symbol">$</span>cat tech-stack.txt</p>
+                        <div>
+                            <span class="tag">Python</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Audio Classification</span>
+                            <span class="tag">TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- African Malaria Analysis -->
+            <div class="col-lg-6 d-flex mx-auto">
+                <div class="terminal-window project-card flex-fill">
+                    <div class="terminal-title-bar">
+                        <div class="terminal-controls">
+                            <span class="terminal-dot td-red"></span>
+                            <span class="terminal-dot td-yellow"></span>
+                            <span class="terminal-dot td-green"></span>
+                        </div>
+                        <span>malaria-ml-distribution/</span>
+                        <span class="project-type-badge">PUBLIC HEALTH</span>
+                    </div>
+                    <div class="terminal-content">
+                        <h2 class="project-title">African Malaria Analysis</h2>
+                        <p class="project-subtitle">Resource Distribution via Machine Learning</p>
+                        <p class="prompt-line"><span class="prompt-symbol">$</span>cat README.md</p>
+                        <p class="project-desc">
+                            Developed an ML model to predict malaria hotspots across Sub-Saharan Africa and optimise the distribution of anti-malaria resources to high-risk regions. Sourced regional malaria index data from the World Bank. Achieved 79% baseline accuracy, with 88% projected after hyperparameter tuning.
+                        </p>
+                        <div class="project-stats-row">
+                            <span class="stat-chip">01/2021 &ndash; 04/2021</span>
+                            <span class="stat-chip">79% baseline accuracy</span>
+                            <span class="stat-chip">World Bank data</span>
+                        </div>
+                        <hr class="term-divider">
+                        <p class="prompt-line" style="font-size:13px;"><span class="prompt-symbol">$</span>cat tech-stack.txt</p>
+                        <div>
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Predictive Modelling</span>
+                            <span class="tag">World Bank API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-  
-      </div>
     </div>
-  </nav>
 
-  <div class="window">
-    <div class="title-bar">African Child Kick Initiative</div>
-    <div class="content">
-      African Child Kick Initiative was created and launched amongst my peers and I to address the general 
-      unawareness about the situation of less fortrunate and vulnerable children within our respective countries in the East African region. This was a big issue for us
-      considering the large amount of vulnerable children who need support from society as whole<br>
-      Using repeat annual campaigns and a platform to create a network of children's home and shelters we aim to connect all these institutions to the general public.
-      So far this has allowed us to provide for 65 children over the last two years and we are aiming to expand this over the next few years.
-    </div>
-  </div>
-
-  <div class="window">
-    <div class="title-bar">OpenPublish</div>
-    <div class="content">
-      Political information and Civic education
-    </div>
-  </div>
-
-  <div class="window">
-    <div class="title-bar">OneSum Management Software</div>
-    <div class="content">
-      A charity web platform for orphanage support using Goodstack donations.
-    </div>
-  </div>
-
-  <div class="window">
-    <div class="title-bar">Lwandle Fishfarms</div>
-    <div class="content">
-      A logistics & analytics admin dashboard for a Nairobi-based delivery service.
-    </div>
-  </div>
 </body>
+</html>

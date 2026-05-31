@@ -1,48 +1,152 @@
+/* ── Loading Screen ── */
 .loading-screen {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background-color: #000;
-    color: #00AA00;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 2em;
-  }
-
-#floating-gif{
-    width: 150px;
-    margin: auto;
+    z-index: 10000;
+    font-family: 'Press Start 2P', monospace;
 }
 
-.progress-bar {
-    width: 50%;
-    height: 20px;
-    border: 2px solid #00AA00;
+.loading-label {
+    font-size: 18px;
+    color: #00FF00;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+    margin-bottom: 32px;
+    letter-spacing: 5px;
 }
-  
-.progress {
+
+@keyframes dots {
+    0%   { content: '';    }
+    25%  { content: '.';   }
+    50%  { content: '..';  }
+    75%  { content: '...'; }
+    100% { content: '';    }
+}
+
+.loading-dots::after {
+    content: '';
+    animation: dots 1.2s infinite;
+}
+
+.loading-bar-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(200px, 40%, 420px);
+    gap: 10px;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 14px;
+    border: 1px solid #003300;
+    background-color: #000e00;
+    box-shadow: 0 0 10px rgba(0, 170, 0, 0.2);
+}
+
+.loading-progress {
     height: 100%;
-    background-color: #00AA00;
+    background-color: #006600;
     width: 0;
+    box-shadow: 4px 0 12px rgba(0, 255, 0, 0.4);
+    transition: width 0.04s linear;
 }
 
-#experience-page-body{
-    margin: 5%;
-    margin-bottom: 1%;
+.loading-percent {
+    font-size: 9px;
+    color: #004400;
+    letter-spacing: 2px;
 }
 
-#desc{
-    font-size: smaller;
+/* ── Experience Entries ── */
+.exp-entry {
+    padding: 24px 28px;
 }
 
-#body{
-    font-size: small;
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
 }
 
-#education-section{
-    margin:5%;
+.exp-company {
+    display: block;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    color: #00CC00;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.exp-role {
+    display: block;
+    font-size: 14px;
+    color: #00BB00;
+    font-style: italic;
+}
+
+.exp-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.exp-location {
+    font-size: 13px;
+    color: #009900;
+}
+
+.exp-location i {
+    margin-right: 5px;
+    color: #004400;
+}
+
+.exp-dates {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    color: #009900;
+}
+
+.exp-body > p {
+    color: #B8B8B8;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 10px;
+}
+
+.exp-bullets {
+    color: #A0A0A0;
+    font-size: 14px;
+    line-height: 1.9;
+    padding-left: 18px;
+    margin-bottom: 12px;
+}
+
+.exp-bullets li::marker {
+    color: #006600;
+}
+
+.exp-entry-compact {
+    padding: 18px 28px;
+}
+
+.exp-divider {
+    border-top: 1px solid #001500;
+    margin: 0 28px;
+}
+
+@media (max-width: 576px) {
+    .exp-header  { flex-direction: column; }
+    .exp-meta    { align-items: flex-start; }
+    .exp-entry   { padding: 18px 16px; }
+    .exp-divider { margin: 0 16px; }
 }
