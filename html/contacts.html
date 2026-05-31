@@ -60,7 +60,7 @@
                         </div>
                         <div class="contact-info-item">
                             <span class="contact-label"><i class="fas fa-envelope"></i> Email</span>
-                            <span class="contact-value"><a href="mailto:eoballa@gmail.com" style="color:inherit;">eoballa@gmail.com</a></span>
+                            <span class="contact-value"><a href="mailto:edwardoballaofficial@gmail.com" style="color:inherit;">edwardoballaofficial@gmail.com</a></span>
                         </div>
                         <div class="contact-info-item">
                             <span class="contact-label"><i class="fas fa-briefcase"></i> Work type</span>
@@ -131,18 +131,23 @@
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            btn.textContent = '[ MESSAGE SENT ✓ ]';
-            btn.style.borderColor = '#00CC00';
-            btn.style.color = '#00FF00';
-            btn.style.boxShadow = '0 0 16px rgba(0,200,0,0.3)';
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fas fa-paper-plane" style="margin-right:10px;"></i>SEND MESSAGE';
-                btn.style.borderColor = '';
-                btn.style.color = '';
-                btn.style.boxShadow = '';
-                this.reset();
-            }, 3000);
+
+            const name    = this.querySelector('input[type="text"]').value.trim();
+            const email   = this.querySelector('input[type="email"]').value.trim();
+            const subject = this.querySelectorAll('input[type="text"]')[1].value.trim();
+            const message = this.querySelector('textarea').value.trim();
+
+            const body = [
+                'From: ' + name + ' <' + email + '>',
+                '',
+                message
+            ].join('\n');
+
+            const mailto = 'mailto:edwardoballaofficial@gmail.com'
+                + '?subject=' + encodeURIComponent(subject || 'Portfolio enquiry')
+                + '&body='    + encodeURIComponent(body);
+
+            window.location.href = mailto;
         });
     </script>
 
